@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="navi.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="top">
+    <h1>CAJAB POLYTECH</h1>
+  </header>
+  <nav class="navbar1" id="navbar">
+    <ul class="menu-list">
+      <li class="logo"><a href="#"><img src="logo.jpeg" alt="logo"></a></li>
+    
+
+      <div class="dropdown">
+          <button class="dropbtn"><li><i class="fa fa-fw fa-home"></i><a href="index.php">Home</a></li> </button>
+
+      </div>
+      
+
+
+      <div class="dropdown">
+        <button class="dropbtn"><li><i class=" fa fa-question-circle-o"></i><a href="#">About</a><i class="fa fa-caret-down"></i></li>
+
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn"> <li><i class=" fa fa-institution"></i><a href="#">Departments</a><i class="fa fa-caret-down"></i></li>
+
+        </button>
+        <div class="dropdown-content">
+         <a href="ENGINEERING.php"><i class="fas fa-screwdriver"></i>Engineering</a>
+          <a href="ComputerSci.php" ><i class="fas fa-laptop-code"></i> Computer Science</a>
+          <a href="#"> <i class="fas fa-wind"></i> Refrigeration & Air Conditioning</a>
+        </div>
+      </div>
+     
+
+      <div class="dropdown">
+        <button class="dropbtn"><li><i class=" fa fa-fw fa-envelope"></i><a href="CONTACT.php">Contact Us</a></li> </button>
+
+    </div>
+    
+
+    <div class="dropdown">
+        <button class="dropbtn">  <li><i class="fa fa-fw fa-user ">  </i><a href="log.php">Sign up / Login</a><i class="fa fa-caret-down"></i></li>
+        </button>
+        <div class="dropdown-content">
+          <a href="log.php"><i class="fas fa-chalkboard-teacher"></i> For Lecturers</a>
+        
+          <a href="log.php"><i class="fas fa-child"></i>For Students</a>
+        </div>
+      </div>
+
+
+
+    </ul>
+  </nav>
+  <script>
+    const nav = document.querySelector("#navbar");
+    const NavTop = nav.offsetTop;
+
+    function fixnavbar(){
+      if(window.scrollY >= NavTop){
+        document.body.style.paddingTop = nav.offsetHeight + "px";
+        document.body.classList.add("fixed-nav");
+      }else {
+        document.body.style.paddingTop = 0;
+        document.body.classList.remove("fixed-nav");
+      }
+    }
+    window.addEventListener("scroll", fixnavbar);
+  </script>
+</body>
+</html>

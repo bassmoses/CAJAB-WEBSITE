@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    
+  }
+
+
+
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+    
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+   
+    
+
+    
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+
+
+
+  .top {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fbb833;
+    height: 25vh;
+    margin-top: -30px;
+  }
+  .top > h1 {
+    color: #fff;
+    font-size: 100px;
+    text-shadow: 3px 5px 0 rgb(0 0 0 / 20%);
+  }
+  nav#navbar {
+    background: #3f3d56;
+    top: 0;
+    position: relative;
+    width: 100%;
+    transition: all 0.5s linear;
+    z-index: 1;
+    
+    
+  }
+  ul.menu-list {
+    display: flex;
+    list-style: none;
+    
+  }
+  ul.menu-list li {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    
+    
+  }
+  ul.menu-list li.logo {
+    max-width: 0;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.5s linear;
+  }
+  .logo > a > img {
+    max-width: 80px;
+  }
+  ul.menu-list li > a {
+    text-decoration: unset;
+    display: flex;
+    color: #fff;
+    transition: 0.2s linar;
+    text-transform: uppercase;
+    
+    
+  }
+  body.fixed-nav nav#navbar {
+    position: fixed;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+  }
+  body.fixed-nav li.logo {
+    max-width: 300px;
+  }
